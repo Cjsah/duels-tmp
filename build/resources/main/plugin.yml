@@ -1,0 +1,7 @@
+name: duels
+version: '1.0'
+main: xyz.jxmm.duels
+api-version: '1.20'
+
+commands:
+  test:
