@@ -60,4 +60,6 @@ public abstract class ParentCommand extends Command {
     public List<SubCommand> getSubCommands() {
         return subCommands;
     }
+
+    public abstract void execute(CommandSender s, String[] args);
 }

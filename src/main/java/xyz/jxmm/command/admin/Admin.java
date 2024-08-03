@@ -3,13 +3,14 @@ package xyz.jxmm.command.admin;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
-import xyz.jxmm.command.SubCommand;
+import xyz.jxmm.command.ParentCommand;
 
-public class Admin extends SubCommand {
+public abstract class Admin extends ParentCommand {
     public static Admin instance;
-    public Admin(String name, String permission) {
-        super(name, permission);
+    public Admin(String name) {
+        super(name);
         instance = this;
+        addSubCommand(new GetXYZ("getXYZ","duels.admin"));
 
     }
     @Override

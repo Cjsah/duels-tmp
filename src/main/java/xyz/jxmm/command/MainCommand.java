@@ -8,15 +8,31 @@ import org.bukkit.entity.Player;
 import xyz.jxmm.Duels;
 import xyz.jxmm.command.admin.Admin;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MainCommand extends ParentCommand {
     public static MainCommand instance;
+    private List<ParentCommand> parentCommands = new ArrayList<>();
     public MainCommand(String name){
         super(name);
         instance = this;
-        addSubCommand(new Admin("admin","duels.admin"));
+        addParentCommand(new Admin("admin") {
 
+            @Override
+            public void sendDefaultMessage(CommandSender s) {
+                s.sendMessage("test");
+            }
+        });
+
+
+
+    }
+
+
+    public void addParentCommand(ParentCommand parentCommand){
+        parentCommands.add(parentCommand);
     }
 
     @Override
@@ -30,6 +46,11 @@ public class MainCommand extends ParentCommand {
         if (hasSubCommand("admin")) {
             p.sendMessage("admin");
         }
+
+    }
+
+    @Override
+    public void execute(CommandSender s, String[] args) {
 
     }
 

@@ -1,6 +1,9 @@
 package xyz.jxmm.command;
 
+import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
+
+import java.util.List;
 
 public abstract class SubCommand {
     private String name;
@@ -17,4 +20,5 @@ public abstract class SubCommand {
     public String getName() {
         return name;
     }
+
 }
