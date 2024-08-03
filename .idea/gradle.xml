@@ -11,6 +11,22 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/duels-api" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/duels-api" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/duels-plugin" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/duels-plugin" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
