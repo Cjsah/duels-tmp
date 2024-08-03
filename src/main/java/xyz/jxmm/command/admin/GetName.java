@@ -1,12 +1,12 @@
 package xyz.jxmm.command.admin;
 
+import org.bukkit.Color;
 import org.bukkit.command.CommandSender;
 import xyz.jxmm.command.Command;
 
-public class Admin extends Command {
-    public Admin(String name) {
+public class GetName extends Command {
+    protected GetName(String name) {
         super(name);
-        addCommand(new GetName("name"));
     }
 
     @Override
@@ -16,6 +16,6 @@ public class Admin extends Command {
 
     @Override
     public void execute(CommandSender s, String[] args) {
-
+        s.sendMessage(Color.AQUA + "Your name is" + Color.RED + s.getName());
     }
 }
