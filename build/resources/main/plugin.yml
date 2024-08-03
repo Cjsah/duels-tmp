@@ -1,7 +1,4 @@
-name: duels
+name: Duels
 version: '1.0'
-main: xyz.jxmm.duels
+main: xyz.jxmm.Duels
 api-version: '1.20'
-
-commands:
-  test:
