@@ -15,7 +15,7 @@ public abstract class Command extends org.bukkit.command.Command {
 
     protected Command(String name) {
         super(name);
-        addCommand(new Admin("admin"));
+        this.addCommand(new Admin("admin"));
     }
 
     @Override

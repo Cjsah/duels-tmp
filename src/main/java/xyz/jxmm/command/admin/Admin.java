@@ -10,7 +10,7 @@ public class Admin extends Command {
     private List<Command> commands = new ArrayList<>();
     public Admin(String name) {
         super(name);
-        addCommand(new GetName("name"));
+        this.addCommand(new GetName("name"));
     }
 
     public void addCommand(Command command){

@@ -4,7 +4,11 @@ import org.bukkit.Color;
 import org.bukkit.command.CommandSender;
 import xyz.jxmm.command.Command;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GetName extends Command {
+    private List<Command> commands = new ArrayList<>();
     protected GetName(String name) {
         super(name);
     }
