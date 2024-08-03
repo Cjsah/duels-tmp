@@ -4,6 +4,7 @@ import org.bukkit.Color;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import xyz.jxmm.Duels;
+import xyz.jxmm.command.admin.Admin;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +15,7 @@ public abstract class Command extends org.bukkit.command.Command {
 
     protected Command(String name) {
         super(name);
+        addCommand(new Admin("admin"));
     }
 
     @Override
@@ -42,6 +44,7 @@ public abstract class Command extends org.bukkit.command.Command {
         return true;
 
     }
+
 
     public List<Command> getSubCommands() {
         return commands;
